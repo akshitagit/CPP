@@ -23,8 +23,7 @@ void bucketSort(float arr[], int n)
 
 int main() 
 { 
-	float arr[] = { 0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434 }; 
-	int n = sizeof(arr) / sizeof(arr[0]); 
+    float arr[10], n;
 
     printf("Enter the number of elements required:");
     scanf("%d", &n);
