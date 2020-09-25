@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-string removeRepeatition(s);
+string removeRepeatition(string s)
 {
 	string ans = ""; // answer string initially empty
 	ans = ans+s[0]; // adding the first character to answer string
@@ -20,5 +20,5 @@ int main()
 	cin>>s;
 	cout<<endl;
 	string a= removeRepeatition(s);
-	cout<<s;
+	cout<<a;
 }
