@@ -1,8 +1,8 @@
-# CPP
+# CPP/C
+
 ## Open Repository For Students to Contribute Algorithms and Data Structures in different Languages
 
 ## This Repository is meant for everyone to create code and learn to contribute to open source
-
 
 People can star, fork or clone this repo and can add any type of data structures or algorithm codes and can raise PR during hacktoberfest.
 
@@ -26,5 +26,11 @@ Find a ISSUE you want to contribute to ->> Fork it
 
 If the reviewers ask for changes, repeat steps 5 and 6 to add more commits to your pull request.
 
+The implementations/codes which are added/merged in CPP-:
+
+
+
+
 
 Happy coding!
+

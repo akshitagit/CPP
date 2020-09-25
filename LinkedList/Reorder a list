@@ -1,0 +1,79 @@
+//Given a singly linked list L: L0→L1→…→Ln-1→Ln,
+//reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…
+#include<bits/stdc++.h>
+using namespace std;
+struct Node{
+  int data;
+  Node* next;
+  Node(int data){
+  this->data= data;
+  next=NULL;
+  }
+};
+
+Node* reverse(Node* head){
+        if(!head) return NULL;
+        Node* curr= head;
+        Node* prev= NULL;
+        Node* next= NULL;
+        
+        while(curr){
+            next= curr->next;
+            curr->next= prev;
+            prev= curr;
+            curr= next;
+        }
+        
+        return prev;
+    }
+    
+    void reorderList(Node* head) {
+        if(!head) return ;
+        if(head->next==NULL) return ;
+        Node* slow= head;
+        Node* fast= head;
+        
+        while(slow&&fast&&fast->next){
+            slow= slow->next;
+            fast= fast->next->next;
+        }
+      
+        Node* second= reverse(slow->next);
+        slow->next= NULL;
+        Node* first= head;
+        
+        while( first && second){
+            
+            Node* next1= first->next;
+            Node* next2= second->next;
+            
+            first->next= second;
+            second->next=next1;
+            first= next1;
+            second= next2;
+        }
+    }
+    
+int main(){
+
+  int n; //enter the length of the link list
+  cin>>n;
+   Node* head=NULL;
+   Node* tail=NULL;
+   for(int i=0;i<n;i++){
+     int node; //values of the link list from the user
+    cin>>node;
+    Node* newnode= new Node(node);
+    if(head==NULL){
+     head= newnode;
+     tail= newnode;
+    }
+    else{
+    tail->next= newnode;
+    tail= newnode;
+    }
+   }
+ 
+reorderlist(head);
+   return 0;
+}
