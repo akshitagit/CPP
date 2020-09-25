@@ -1,4 +1,5 @@
 #include<iostream>
+#include<climits>
 
 using namespace std;
 string Number(int arr[], int n) {
