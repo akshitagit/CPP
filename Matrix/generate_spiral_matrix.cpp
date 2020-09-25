@@ -50,8 +50,10 @@ int main(){
 	
 	vector<vector<int>> ans_matrix=generateSpiralMatrix(n);
 	
-	for(int i=0;i<n;i++){
-		for(int j=0;j<n;j++){
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<n;j++)
+		{
 			cout<<ans_matrix[i][j]<<" ";
 		}
 		cout<<"\n";
