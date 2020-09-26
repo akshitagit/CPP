@@ -52,5 +52,4 @@ int main() {
         cout<<ans<<endl;
     }
 
-	// Write your code here
 }
