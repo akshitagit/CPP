@@ -27,7 +27,7 @@ int longestAP (int set[], int n) {
                 // are equal to lapLen with j and k as the first two elements +1
                 TBL[i][j] = TBL[j][k] +1;
                 // update overall lapLen if needed
-                lapLen = max(lapLen, L[i][j]);
+                lapLen = max(lapLen, TBL[i][j]);
                 // change i and k to fill more TBL[i][j] values for current j
                 i--; k++;
             }
