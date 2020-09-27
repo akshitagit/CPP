@@ -19,7 +19,7 @@ int longestAP (int set[], int n) {
          while (i >= 0 && k <= n-1) {
              if (set[i] + set[k] < 2*set[j])
                 k++;
-            // before changing i set L[i][j] as 2
+            // before changing i set TBL[i][j] as 2
             else if (set[i] + set[k] > 2*set[j]) {
                 TBL[i][j] =2, i--;
             } else {
@@ -66,6 +66,19 @@ int improvedSpaceSol (vector<int> A) {
     }
     return len;
 }
+// this function using vector<vector<int> is faster then other 2d / x_map approaches.
+int lasl (vector<int> A) {
+    int len = 2; int n = A.size();
+    vector<vector<int>> dp(n, vector<int>(2000,0));
+    for (int i = 0; i < n; i++){
+        for(int j = i+1; j < n; j++){
+            int dif = A[j] - A[i] + 1000;
+            dp[j][dif] = max(2, dp[i][dif] +1 );
+            len = max(len, dp[j][dif]);
+        }
+    }
+    return len;
+}
 // tests
 int main() {
     cout << "first approach in O(n^2) time & O(n^2) space\n";
@@ -74,7 +87,11 @@ int main() {
     cout <<  longestAP(set, n1) << endl; 
   
     cout << "improved approach in O(n^2) time & O(n) space\n";
-    vector<int>set2({10, 8, 4, 6, 2, 12});
+    vector<int>set2({20, 8, 4, 6, 2, 30});
     cout << improvedSpaceSol(set2) << endl;
+
+    cout << "vector of vector runs faster but idk wh..\n";
+    vector<int>set3({1, 3, 5, 7, 9, 30});
+    cout << lasl(set3) << endl;
     return 0;
 }
