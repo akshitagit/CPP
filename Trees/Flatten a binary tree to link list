@@ -1,0 +1,68 @@
+
+//flatten binary tree to link list
+
+
+#include<iostream>
+using namespace std;
+
+template <typename T>         
+
+class BinaryTreeNode{                             
+ public :
+ T data;
+ BinaryTreeNode<T>* right;
+ BinaryTreeNode<T>*left;
+ BinaryTreeNode(T data){
+   this->data = data;
+   right = NULL;
+   left = NULL;
+ }
+};
+
+TreeNode* fix(TreeNode* root){
+        
+        if(!root){
+            return NULL;
+        }
+        TreeNode* l= fix(root->left);
+        TreeNode* r= fix(root->right);
+        TreeNode* lhead= root->left;
+        TreeNode* rhead= root->right;
+        TreeNode* ans;
+        if(l==NULL&&r==NULL)
+        {
+            ans= root;
+        }
+        else if(l==NULL&&r!=NULL){
+            ans=r;
+        }
+        else if(l!=NULL&&r==NULL){
+           root->right= lhead;
+           root->left=NULL;
+            ans=l;
+        }
+        else{
+            root->right= lhead;
+           root->left=NULL;
+           l->right=rhead;
+            ans=r;
+        }
+        return ans;
+    }
+
+void flatten(TreeNode* root) {
+        fix(root);
+    }
+
+int main()
+{
+   BinaryTreeNode<int> *root = new BinaryTreeNode<int>(1);
+   root->left = new BinaryTreeNode<int>(2);
+   root->right = new BinaryTreeNode<int>(3);
+   root->left->left = new BinaryTreeNode<int>(4);
+   root->left->right = new BinaryTreeNode<int>(5); 
+flatten(root);
+return 0;
+}
+
+
