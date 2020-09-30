@@ -2,20 +2,21 @@
 // and height finding utilities
 #include<bits/stdc++.h>
 using namespace std;
-
+// Structure for Node
 struct node{
     struct node * left=NULL;
     struct node * right=NULL;
     int key;
 }
 ;
+//Utility to create a node
 struct node *createNode(int data)
 {
     struct node* temp=(struct node*)malloc(sizeof(struct node));
     temp->key=data;
     return temp;
 }
-
+// Utitilty to insert a node in BST
 struct node *insertBST(struct node* root,int data )
 {
     if(root==NULL)
@@ -36,7 +37,7 @@ struct node *insertBST(struct node* root,int data )
     
     return root;
 }
-
+// Utility to find the height of the BST from root
 int height(struct node *root)
 {
     if(root==NULL)
@@ -50,7 +51,7 @@ int height(struct node *root)
         return max(hleft,hright)+1;
     }
 }
-
+// Utility to get preorder traversal of the BST
 void preorder(struct node* root)
 {
     if(root==NULL)
@@ -66,6 +67,7 @@ void preorder(struct node* root)
         return;
     }
 }
+// Driver Function
 int main()
 {
     char ch='y';
