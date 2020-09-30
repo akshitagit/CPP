@@ -1,3 +1,10 @@
+/* Kruskal's algorithm for MST is a gready algorithm in which weighted edges are sorted in ascending order of their weights. 
+   The smallest edge is picked. Whether it forms a cycle with the spanning tree formed so far is checked. 
+   If cycle is not formed, then this edge is included. Else, discarded.
+   The above step is repeated until there are (V-1) edges in the spanning tree.
+*/
+
+//Time Complexity : E log E ( for sorting edges in ascending order of their weights)  
 #define vvi vector<vector<int>>
 #define vi vector<int>
 // function to sort graph edges by weight in ascending order
