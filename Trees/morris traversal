@@ -1,0 +1,77 @@
+
+#include<iostream>
+using namespace std;
+
+template <typename T>        
+
+class BinaryTreeNode{                              
+
+
+ public :
+
+
+ T data;
+
+
+ BinaryTreeNode<T>* right;
+ BinaryTreeNode<T>*left;
+ BinaryTreeNode(T data){
+   this->data = data;
+   right = NULL;
+   left = NULL;
+ }
+};
+
+ vector<int> inorderTraversal(TreeNode* root) {
+        TreeNode* curr= root;
+        vector<int> ans;
+        while(curr!=NULL){
+        if(curr->left==NULL)    
+        {
+            ans.push_back(curr->val);
+            curr=curr->right;
+        }
+        else{
+         TreeNode* currp= curr->left;
+            while(currp->right!=NULL && currp->right!=curr){
+                currp=currp->right;
+            }
+             
+            if(currp->right==NULL){
+                currp->right= curr;
+                curr=curr->left;
+            }
+            else{
+                
+                currp->right=NULL;
+                ans.push_back(curr->val);
+                curr= curr->right;
+            }
+         }
+            
+        }
+        return ans;
+        
+    }
+
+int main()
+{
+   BinaryTreeNode<int> *root = new BinaryTreeNode<int>(1);
+   root->left = new BinaryTreeNode<int>(2);
+   root->right = new BinaryTreeNode<int>(3);
+   root->left->left = new BinaryTreeNode<int>(4);
+   root->left->right = new BinaryTreeNode<int>(5); 
+
+   cout << "Inorder traversal of binary tree is ";
+   vector<int> ans= inorderTraversal(root);
+
+
+for(int i=0;i<ans.size();i++){
+cout<<ans[i]<<” “;
+}
+
+
+ return 0;
+
+
+}
