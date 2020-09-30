@@ -10,6 +10,9 @@ PROBLEM STATEMENT
     Since the answer can get very large 
     output answer modulo 10^9 + 7
 
+	In this program 'n' is the number of coins and 
+	'k' is the target value.
+
 BASIC IDEA
     At each step just keep the answers upto that particular
     instance of sum you have and work your way upto
