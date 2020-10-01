@@ -9,7 +9,7 @@
 
 ## Open Repository For Students to Contribute Algorithms and Data Structures in different Languages
 
-## This Repository is meant for everyone to create code and learn to contribute to open source
+## This Repository is meant for everyone to create code and learn to contribute to open source.
 
 People can star, fork or clone this repo and can add any type of data structures or algorithm codes and can raise PR during hacktoberfest.
 
