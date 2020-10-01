@@ -5,7 +5,7 @@ void hanoi(int n,char src,char help,char dest)
 {
     if(n==0)
     {
-        return ;
+        return 0;
     }
     
     
