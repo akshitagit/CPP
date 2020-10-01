@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std ;
+
+void mergeSort(int input[], int size){
+   
+  void sort(int input[],int s,int e);
+  sort(input,0,size-1);
+  
+}
+
+void sort(int input[],int s,int e)
+{
+  int m=s-(s-e)/2;
+  if(s>=e)
+    return ;
+  
+  sort(input,s,m);
+  sort(input,m+1,e);
+  int i=s;
+  int j=m+1;
+  int k=0;
+  int b[e-s+1];
+  while(i<m+1&&j<=e)
+  {
+    if(input[i]<=input[j])
+      b[k++]=input[i++];
+    else
+      b[k++]=input[j++];
+  }
+  
+    while(i<m+1)
+      b[k++]=input[i++];
+  
+  
+  
+    while(j<=e)
+      b[k++]=input[j++];
+  int t=0;
+  for(int i=s;i<=e;i++)
+    input[i]=b[t++];
+}
+
+int main() {
+  int input[1000],length;
+  cin >> length;
+  for(int i=0; i < length; i++)
+    cin >> input[i];
+  mergeSort(input, length);
+  for(int i = 0; i < length; i++) {
+    cout << input[i] << " ";
+  }
+}
