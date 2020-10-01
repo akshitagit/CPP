@@ -29,11 +29,6 @@ int power_iterative(int a, int b)
     return result;
 }
 
-int inverse(int a, int p)
-{
-    return power_iterative(a, p - 2);
-}
-
 int main()
 {
     int a, b;
