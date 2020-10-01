@@ -1,1 +1,8 @@
+Program-1:
+Write a propgram to add two Integers?
 
+Variable description:
+
+firstNumber:holds first number
+secondNumber:holds second number
+sumOfTwoNumbers:holds the sum of first and second number
