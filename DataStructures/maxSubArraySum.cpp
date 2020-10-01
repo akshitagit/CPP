@@ -5,7 +5,8 @@ using namespace std;
 // we start with initiating current_sum to the first element
 // now we will decide if we wanna add the next element to our window
 //we will start a new window from current element
-// if current_sum+current element> current element, we will add current element to our window
+// if current_sum+current element> current element, 
+//we will add current element to our window
 //else we start a new window from current element
 //in the process we will keep updating max_sum
 int finaMaxSubArraySum(vector<int> &nums)
