@@ -1,10 +1,10 @@
 //Time Complexity - O(N)
 void Graph::dfsUtil(int node,int src){
-	cout<<" "<<node;
-	visited[node]=true;
+	cout<<" "<<node;          //output node value in the order of dfs
+	visited[node]=true;         //mark node as visited
 
-	for(int child:G[node]){
-		if(child==src) continue;
+	for(int child:G[node]){		//loop through all nodes connected to currect node 
+		if(child==src) continue;		
 		dfsUtil(child,node);
 	}
 }
@@ -16,9 +16,11 @@ int Graph::dfs(int node){
 	
 	//Considering Disconnected Graph as well
 	for(int i=1;i<=numOfNodes;i++){
-		if(visited[i]) continue;
-		connectedComponents++;
-		dfsUtil(i,-1);
+		if(visited[i]) continue ;//if visited then continue
+		else
+		{connectedComponents++;	
+		dfsUtil(i,-1);           
+		}
 	}
 	
 	//returns the number of connected components
