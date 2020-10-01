@@ -41,5 +41,6 @@ int main()
     
     //printing the answer series
     for(int i:ans)
-        cout<<i<<" ";
+        cout<<"Answer sereis is :\n" <<i;
+    return = 0;
 }
