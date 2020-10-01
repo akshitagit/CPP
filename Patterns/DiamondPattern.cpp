@@ -1,28 +1,28 @@
- 
- #include <iostream>
+#include <iostream>
 using namespace std;
 
 int main()
 {
-
-    cout << "Enter a number for printing Diamond Pattern:";
-    int size;
-    cin >> size;
-    int num = 1;
-  for (int i = 1; i <= size; i++) {
-            for (int j = 1; j <=  2*(size - i); j++) {
+        int size=1;
+        int num = 1;
+        cout << "Enter a number for printing Diamond Pattern:";
+        cin >> size;
+        //For prining top
+        for (int row = 1; row <= size; row++) {
+            for (int column = 1; column <=  2*(size - row); column++) {
                 cout <<" ";
             }
-            for (int j = 1; j <= 2*i - 1; j++) {
+            for (int column = 1; column <= 2*row - 1; column++) {
                 cout <<"*"<<" ";
             }
             cout <<endl;
         }
-        for (int i = 1; i <= size - 1; i++) {
-            for (int j = 1; j <= 2*i; j++) {
+        //for printing bottom
+        for (int row = 1; row <= size - 1; row++) {
+            for (int column = 1; column <= 2*row; column++) {
                 cout <<" ";
             }
-            for (int j = 1; j <= 2*(size - i) - 1; j++) {
+            for (int column = 1; column <= 2*(size - row) - 1; column++) {
                 cout <<"*"<<" ";
             }
             cout <<endl;
