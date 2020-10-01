@@ -11,9 +11,9 @@
 
 ## This Repository is meant for everyone to create code and learn to contribute to open source
 
-People can star, fork or clone this repo and can add any type of data structures or algorithm codes and can raise PR during hacktoberfest.
+People can star, fork or clone this Repository and can add any type of data structures or algorithm codes and can raise PR during hacktoberfest.
 
-Use this repo for contributing in open source.
+Use this Repository for contributing in  open source.
 Start solving issues and raise the pull requests and even you can create your own issues.
 If you want to contribute to a project, the simplest way is to:
 
@@ -25,7 +25,7 @@ Find a ISSUE you want to contribute to ->> Fork it
 
     Make your changes
 
-    Push it back to your repo
+    Push it back to your Repository
 
     Click the Compare & pull request button
 
