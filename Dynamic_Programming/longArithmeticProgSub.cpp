@@ -87,11 +87,11 @@ int main() {
     cout <<  longestAP(set, n1) << endl; 
   
     cout << "improved approach in O(n^2) time & O(n) space\n";
-    vector<int>set2({20, 8, 4, 6, 2, 30});
+    vector<int>set2({1, 7, 10, 13, 14, 19});
     cout << improvedSpaceSol(set2) << endl;
 
     cout << "vector of vector runs faster but idk wh..\n";
     vector<int>set3({1, 3, 5, 7, 9, 30});
-    cout << lasl(set3) << endl;
+    cout << lasl(set2) << endl;
     return 0;
 }
