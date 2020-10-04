@@ -50,9 +50,35 @@ Below given is an array, which needs to be sorted. We will use the Quick Sort Al
 
 ![Quick Sort](https://cdn-images-1.medium.com/max/800/1*DtH6fEdBhoUGnjBWudJ8pA.png)
 
-## Complexity
 
-The **Time Complexity** of Quick Sort is O(nLogn). In the worst case, it becomes O(n2).
+## Quick Sort Analysis:
 
-The **Space Complexity** of Quick Sort is O(nLogn).
+**1. Divide and Conquer Algorithm**
 
+**2. Recursive Algorithm**
+
+**3. In-place** (Although it takes space complexity of O(logn) but it's very small so it approximates to O(1).
+
+**4. Unstable** (Equal elements may/may not come in order as they were initially)
+
+**5. Time Complexity:**
+
+    Worst: O(n^2)   
+    
+    Average: Theta(nlogn)
+    
+    Best: Omega(nlogn)
+    
+    
+**NOTE:** Worst case can almost always be avoided using concept of Randomized Quick Sort.
+
+# Randomized Quick Sort
+Randomized Quick Sort is same as Quick Sort but the fact that changes is the selection of pivot.
+In normal Quick Sort we either choose last element or first element of array as pivot, but in Randomized Quick Sort
+we choose any random element as a pivot.
+
+## Advantage of Randomized Quick Sort:
+1. It increases the probability that the array will be divided in half.
+2. Since the chances of selecting biggest or smallest element is low the probabily of getting worst case 
+performance also reduces.
+3. Worst case time complexity is O(nlogn).
