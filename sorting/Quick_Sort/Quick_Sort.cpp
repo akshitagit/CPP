@@ -24,12 +24,19 @@ int Parition(int array[], int left, int right)
     return index;
 }
 
+int randomizedPartition(int A[],int s,int e){
+    int pindx = (rand() %(e - s + 1)) + s;
+    swap(A[pindx],A[e]);
+    return Parition(A,s,e);
+}
+
 void Quick(int array[], int left, int right)
 {
     if(left < right)
     {
         int pivot = Parition(array, left, right);
-
+        //Un-comment below to implement Randomized QuickSort
+        //int pivot = randomizedPartition(array, left, right);
         Quick(array, left, pivot - 1);
         Quick(array, pivot + 1, right);
     }
