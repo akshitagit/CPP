@@ -1,0 +1,50 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int rob(vector<int>& nums) {
+        int n= nums.size();
+        if(n==0){return 0;}
+        if(n==1){return nums[0];}
+        if(n==2){return max(nums[0], nums[1]);}
+        vector<int> dp(n, 0);
+        dp[0]=nums[0];
+        dp[1]= max(nums[0], nums[1]);
+        for(int i=2;i<n;i++){
+            if(i==n-1){
+                dp[i]=dp[i-1];
+            }else{
+                dp[i]=max(dp[i-1], dp[i-2]+nums[i]);
+            }
+        }
+        int maxe=dp[0];
+        for(int i=1;i<n;i++){
+            maxe= max(maxe, dp[i]);
+        }
+        dp[n-1]=nums[n-1];
+        dp[n-2]=max(nums[n-1], nums[n-2]);
+        for(int i=n-3;i>=0;i--){
+            if(i==0){
+                dp[i]=dp[i+1];
+            }else{
+                dp[i]=max(dp[i+1], dp[i+2]+nums[i]);
+            }
+        }
+        
+          int maxo=dp[0];
+        for(int i=1;i<n;i++){
+            maxo= max(maxo, dp[i]);
+        }
+        return max(maxe, maxo);
+    }
+    
+    int main(){
+    int n;
+    cin>>n;
+    vector<int> house(n);
+    for(int i=0;i<house.size())
+     cin>>house[i];    
+    }
+    rob(house);
+    return 0;
+    }
