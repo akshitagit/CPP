@@ -1,4 +1,4 @@
-# CPP/C
+# CPP/C - ALL ABOUT GIT
 
 
 ![Issues](https://img.shields.io/github/issues/akshitagit/CPP)
@@ -39,5 +39,5 @@ The implementations/codes which are added/merged in CPP-:
 
 
 
-Happy coding!
+                                                     HAPPY CODING!
 
