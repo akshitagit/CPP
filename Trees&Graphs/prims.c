@@ -1,3 +1,14 @@
+/*
+Input format:
+    First line would contain number n, which represents number of nodes in the graph (1 to n).
+    Next n line would represent cost matrix. Where each line, representing a distance vector for that node, will have n numbers (separated by space) to represent direct distance from that node to all other nodes.
+    Distance from node to itself and to the non-adjacent node must be 0.
+Last line would contain the starting node.
+
+Output format:
+    Output is n-1 lines containing the edge and weight of that edge (separated by tab) which is included in the minimum spanning tree.
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 

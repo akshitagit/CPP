@@ -1,3 +1,17 @@
+/*
+
+Input format:
+    First line would contain number n, which represents number of nodes in the graph (1 to n).
+    Next n line would represent cost matrix. Where each line, representing a distance vector for that node, will have n numbers (separated by space) to represent direct distance from that node to all other nodes.
+    Distance from node to itself is 0 and -1 if there is no direct edge to any node.
+    Last line would contain node number of the source whose shortest distance from each other node need to be calculated.
+
+Output format:
+    Output is n lines containing 3 information per line (separated by space):
+    Destination node, Shortest Distance to that node and path from source to that node.
+
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
