@@ -2,6 +2,7 @@
 using namespace std;
 int main(){
     int i,j,a,b;
+    //upper part
     for(j=0;j<3;j++)
     {
         for(i=1;i<=20;i++)
@@ -16,8 +17,9 @@ int main(){
             
         }
         cout<<endl;
-        //lowerpart
+       
     }
+     //lowerpart
     for(a=1;a<=11;a++)
     {
         for(b=1;b<=20;b++)
