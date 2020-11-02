@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ff first
+#define ss second
+#define MP make_pair
+#define PB push_back
+#define ll long long
+#define int long long
+#define f(i,x,n) for(int i=x;i<n;i++)
+#define ld long double
+const int mod=1000000007;
+const int INF=1e18;
+int n,a[100005],x;
+pair <int,int> b[100005];
+
+int32_t main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int t;
+	cin>>t;
+	f(tc,1,t+1) {
+		cin>>n>>x;
+		f(i,0,n) {
+			cin>>a[i];
+			b[i].ff=(a[i]-1)/x;
+			if(b[i].ff==-1)
+				b[i].ff=0;
+			b[i].ss=i;
+		}
+		sort(&b[0],&b[n]);
+		cout<<"Case #"<<tc<<":";
+		f(i,0,n)
+			cout<<" "<<b[i].ss+1;
+		cout<<'\n';
+	}
+	
+	return 0;
+}
