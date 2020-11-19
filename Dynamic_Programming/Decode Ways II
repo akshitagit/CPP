@@ -1,0 +1,89 @@
+//https://leetcode.com/problems/decode-ways-ii/
+#include<bits/stdc++.h>
+using namespace std
+
+ int numDecodings(string s) {
+         int n= s.size();
+        if(s=="") return 0;
+       // if(n==1&&s!="0") return 1;
+        if(n==1 &&s[0]=='0') return 0;
+         int mm=1000000000+7;
+     long long  int dp[n+1];
+        memset(dp,0, sizeof(dp));
+        dp[0]=1;
+        if(s[0]=='*'){
+            cout<<"j";
+            dp[1]=9;
+        }
+        else if(s[0]>='1'&&s[0]<='9')
+        {
+            dp[1]=1;
+        }
+        cout<<"k";
+      cout<<dp[0]<<" ";
+        for(int i=2;i<=n;i++){
+            if(s[i-1]=='*')
+            {   dp[i]=(dp[i]+9*dp[i-1])%mm;   
+                if(s[i-2]=='*')
+                {
+                    for(int k=1;k<=9;k++){
+                        for(int l=1;l<=9;l++){
+                         int p= l*10+k;
+                            //cout<<p<<" ";
+                        if(p>=10&&p<=26){
+                            dp[i]=(dp[i]+dp[i-2])%mm;
+                         }
+                        }
+                    }
+                    
+                }
+                else if(s[i-2]>='1'&&s[i-2]<='9')
+                { 
+                    for(int k=1;k<=9;k++){
+                         int z= (s[i-2]-'0')*10+k;
+                        if(z>=10&&z<=26){
+                            dp[i]=(dp[i]+dp[i-2])%mm;
+                         }
+                    }
+                        
+                }
+                
+            }
+            
+            
+            
+            else{
+                
+                if(s[i-1]>='1'&&s[i-1]<='9'){
+               dp[i]=(dp[i]+dp[i-1])%mm;
+            }
+            int x= s[i-1]-'0';
+            if(s[i-2]>='1'&&s[i-2]<='9'){
+            int y= (s[i-2]-'0')*10+x;
+           
+            if(y>=10&&y<=26){
+                dp[i]=(dp[i]+dp[i-2])%mm;
+            }
+           }
+           else if(s[i-2]=='*'){
+               
+               for(int u=1;u<=9;u++){
+                   int q=u*10+x;
+                   if(q>=10&&q<=26){
+                dp[i]=(dp[i]+dp[i-2])%mm;
+            }
+               }
+           }
+           }
+          
+        }
+       
+        return dp[n]%1000000007;
+    }
+    
+    int main(){
+    string s;
+    cin>>s;
+    numDecodings(s);
+    return 0;
+    }
