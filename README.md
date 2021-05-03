@@ -42,6 +42,7 @@ The implementations/codes which are added/merged in CPP-:
 <img src="https://github.com/akshitagit/CPP/blob/master/trend.jpeg" width="230px">
 
 
+### Contributors :pray: :dizzy:
+![105](https://contributors-img.web.app/image?repo=akshitagit/CPP)
 
 Happy coding!
-
