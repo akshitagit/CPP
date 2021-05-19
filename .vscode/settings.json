@@ -1,0 +1,9 @@
+{
+    "materialTheme.accent": "Pink",
+    "files.associations": {
+        "*.jsx": "javascriptreact",
+        "*.js": "javascript",
+        "unordered_map": "cpp",
+        "map": "cpp"
+    }
+}
