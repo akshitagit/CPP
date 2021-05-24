@@ -1,4 +1,7 @@
 
+//This program will reverse the first k element over than other.
+// linked list = 1 2 3 4 5 6 7 8 9 and k=3
+// outpur:3 2 1 6 5 4 9 8 7
 #include<bits/stdc++.h>
 using namespace std;
 
