@@ -5,7 +5,7 @@ Basic:
 Heaps are the data structures which gives us the more prioritised element in constant time with logarithmic insert complexity.
 
 Time Complexity: 
-to insert n elements -> O(n*log(n))
+to insert n elements -> O(n*log(n)) 
 to get top priority element -> O(1)
 to remove n elements -> O(n*log(n))
 ```
