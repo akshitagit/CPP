@@ -1,0 +1,1 @@
+{"name":"Local: Distinct_subsequences","url":"f:\\contrib\\cppAlgo\\CPP\\Dynamic_Programming\\Distinct_subsequences.cpp","tests":[{"id":1629805987463,"input":"rabbbit\nrabbit","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\contrib\\cppAlgo\\CPP\\Dynamic_Programming\\Distinct_subsequences.cpp","group":"local","local":true}
