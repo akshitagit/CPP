@@ -1,4 +1,7 @@
-long arrayManipulation(int n, vector<vector<int>> queries) {
+#include<bits/stdc++.h>
+using namespace std;
+
+int arrayManipulation(int n, vector<vector<int>> queries) {
    
     vector<long int> A(n,0); // sum or difference of K's value in the vector
     long len = queries.size();
