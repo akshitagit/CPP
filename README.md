@@ -14,8 +14,8 @@
 
 
 
-Use this repo for contributing in open source.
-Start solving issues and raise the pull requests and even you can create your own issues.
+Use this repo to contribute to open source.
+Start resolving issues and raise the pull requests and even you can create your own issues.
 If you want to contribute to a project, the simplest way is to:
 
 Find a ISSUE you want to contribute to ->> Fork it
