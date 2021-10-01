@@ -60,7 +60,6 @@ int main() {
 	
 	kruskal(input,n,e);
 	
-	
 	for(int i=0; i<n-1; i++)
 	{
 	    if(input[i].src <input[i].dest)
