@@ -1,7 +1,8 @@
 // Rotating the array by 3 position to right
 //Time COmplexity in O(n)
 #include <stdbool.h> 
-#include <stdio.h> 
+#include <stdio.h>
+#include <bits/stdc++.h>
 
 void rotate(int arr[], int n)
 {
@@ -39,6 +40,18 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-
-    rotate(arr,n);
+//////////////// Method 1
+//     rotate(arr,n);
+    
+//////////////// Method 2 (if we want to rotate to left by x spaces)
+    int x=3;
+    reverse(arr,arr+x);
+    reverse(arr+x,arr+n);
+    reverrse(arr,arr+n);
+    
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
 }
