@@ -3,7 +3,7 @@ using namespace std;
    
 int sum(int arr[], int n)  
 {  
-    int sum = 0; // initialize sum  
+    long long int sum = 0; // initialize sum also prevents overflow 
   
    
     for (int i = 0; i < n; i++)  
