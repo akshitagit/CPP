@@ -2,14 +2,16 @@
 using namespace std;
 void main()
 {
-    int a[5];
+    int n;
+    cin>>n;
+    int* a = new int[n];// declaring array dynamically in heap
     cout<<"Enter values in array :- ";
-    for(int i = 0 ; i < 5 ; i++)
+    for(int i = 0 ; i < n ; i++)
     {
         cin>>a[i];
     }
     cout<<"\n Printing Array :- ";
-    for(int i =0 ; i < 5 ; i++)
+    for(int i =0 ; i < n ; i++)
     {
         cout<<a[i];
     }
