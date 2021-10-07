@@ -11,9 +11,12 @@ int main()
     int a[n];
     for(int i = 0;i < n;i++)
         cin >> a[i];
-    for(int i=k;i<n;i++)
+    reverse(a , a + k - 1);
+    reverse(a + k , a + n);
+    reverse(a , a + n);
+    for(int i=0;i<n;i++)
+    {
         cout<<a[i]<<" ";
-    for(int i=0;i<k;i++)
-        cout<<a[i]<<" ";
+    }
   return 0;
 }
