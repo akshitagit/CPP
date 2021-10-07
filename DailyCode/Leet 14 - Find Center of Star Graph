@@ -1,0 +1,16 @@
+// solution to leetcode problem 1791. Find Center of Star Graph https://leetcode.com/problems/find-center-of-star-graph/
+class Solution {
+public:
+    int findCenter(vector<vector<int>>& edges) {
+        map<int,int>mp;//Using a hashmap to store the nodes visited
+        for(auto i:edges){
+            if(mp.find(i[0])!=mp.end())
+                return i[0];
+            if(mp.find(i[1])!=mp.end())  //As there can only be a single center hence if the node is visited earlier we return the value as the center.
+                return i[1];
+            mp[i[0]]++;
+            mp[i[1]]++;
+        }
+        return -1;// Just a return value so that the compiler doesn't run out of bound and give RTE
+    }
+};
