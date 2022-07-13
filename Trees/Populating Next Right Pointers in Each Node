@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std; 
+  
+class node 
+{ 
+    public:
+    int data; 
+    node* left; 
+    node* right; 
+    node *nextRight; 
+      
+      node(int data)
+    {
+        this->data = data;
+        this->left = NULL;
+        this->right = NULL;
+        this->nextRight = NULL;
+    }
+}; 
+ 
+void connect(node* root) {
+        if(root==NULL)return NULL;
+        node* prev=NULL;
+        queue<node*>q;
+        q.push(root);
+        q.push(NULL);
+        while(!q.empty())
+        {node* temp= q.front();
+            q.pop();
+          if(temp==NULL)
+          {  prev=NULL;
+              if(q.size()>0)
+              {  q.push(NULL);
+              }
+          }else if(temp){
+         temp->next=prev;
+         prev=temp;
+         if(temp->right){q.push(temp->right);}
+         if(temp->left){q.push(temp->left);}
+          }
+        }
+           }
+ 
+ 
+int main() 
+{ 
+  
+   
+    node *root = new node(10); 
+    root->left = new node(8); 
+    root->right = new node(2); 
+    root->left->left = new node(3); 
+    root->right->right 	= new node(90); 
+  
+    // Populates nextRight pointer in all nodes 
+   connect(root);
+return 0;
+}
+

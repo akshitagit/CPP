@@ -6,12 +6,19 @@
 ![Forks](https://img.shields.io/github/forks/akshitagit/CPP)
 ![Stars](https://img.shields.io/github/stars/akshitagit/CPP)
 
+# REPOSITORY MAINTAINER : ![AKSHITA GUPTA](https://github.com/akshitagupta15june) 
 
 ## Open Repository For Students to Contribute Algorithms and Data Structures in different Languages
 
 
-Use this repo for contributing in open source.
-Start solving issues and raise the pull requests and even you can create your own issues.
+
+## This Repository is meant for everyone to create code and learn to contribute to open source.
+
+
+
+
+Use this repo to contribute to open source.
+Start resolving issues and raise the pull requests and even you can create your own issues.
 If you want to contribute to a project, the simplest way is to:
 
 Find a ISSUE you want to contribute to ->> Fork it
@@ -32,9 +39,13 @@ If the reviewers ask for changes, repeat steps 5 and 6 to add more commits to yo
 
 The implementations/codes which are added/merged in CPP-:
 
+# WE ALL HAVE MADE THIS REPOSITORY TO TREND IN GITHUB REPOSITORIES
 
 
+<img src="https://github.com/akshitagit/CPP/blob/master/trend.jpeg" width="230px">
 
+
+### Contributors :pray: :dizzy:
+![105](https://contributors-img.web.app/image?repo=akshitagit/CPP)
 
 Happy coding!
-

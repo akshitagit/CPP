@@ -1,0 +1,40 @@
+//Basic implementation of the classical 0/1 Knapsack Problem using Dynamic Programming
+
+//Problem Statement : There are N items in a shop and a robber has a bag of capacity W. Prices of the items are given in an array "prices" and weights of individual items given in array "weights". We need to maximize our profit. 
+
+//Solution approach : We check the following steps ->               
+//a) Objective function : f(i,j)=maximum profit he can achieve either by including the ith element in a bag of remaining capacity j or by excluding it
+//b) Base cases :
+    //  When N=0 -> no items in shop -> no profit
+    //  Thus, f(0,j)=0 for any j
+    //  When W=0 ->Bag can't hold any object -> no profit
+    //  Thus, f(i,0)=0 for any i
+//c) Recurrence relation : 
+//    f(i,j)=max(include,exclude)
+//    include=prices[i-1]+f(i-1,j-weights[i-1]) [if weights[i]<=j]
+//    exclude=0+f(i-1,j) [if i cannot be included as weights[i-1]>j]
+//d) Strategy: Bottom Up
+//e) Location of answer : dp[N][W]
+
+//Code 
+int knapSack(int W, int weights[], int prices[], int N) 
+{ 
+    int i, j; 
+    int dp[N + 1][W + 1]; 
+  
+    // Build table dp[][] in bottom up manner 
+    for (i = 0; i <= n; i++) { 
+        for (j = 0; j <= W; j++) { 
+            if (i == 0 || j == 0) 
+                dp[i][j] = 0; 
+            else if (weights[i - 1] <= j) 
+                dp[i][j] = max( 
+                    prices[i - 1] + dp[i - 1][j - weights[i - 1]], 
+                    dp[i - 1][j]); 
+            else
+                dp[i][j] = dp[i - 1][j]; 
+        } 
+    } 
+  
+    return dp[N][W]; 
+} 

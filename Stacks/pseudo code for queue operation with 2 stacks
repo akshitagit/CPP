@@ -1,0 +1,65 @@
+
+struct Queue { 
+
+    Queue(int x) : max_length(x){}    //store length of queue in max_length
+    Create_Stack(s1)              //create stack s1 
+    Create_Stack(s2)              //create stack s2
+
+     isFullQueue()                //function to check if queue is full 
+     {
+        IF max_length==(s1.length + s2.length) THEN //return true queue size is equal to max length of queue
+            return true;    
+        END IF
+        return false;
+    }
+
+     QueueIsEmpty()               //function to check if queue is empty 
+    {
+        IF IsEmptyStack(s1) && IsEmptyStack(s1)  THEN //check size of s1 and s2
+            return true;
+        END IF
+        return false;
+    }
+
+     enQueue(int x)                     //function to enqueue (insert) element in queue.
+    { 
+        IF queueIsEmpty()  THEN
+            print("Queue is Full")      //print  message
+            exit(0)                     //exit the program
+        END IF
+            
+        s1.push(x);                     //pushes element to enqueue in s1
+    } 
+    
+     deQueue() 
+    { 
+        IF QueueIsEmpty() THEN
+            print("Queue is empty")     //print  message
+            exit(0)                     //exit the program
+        END IF
+        
+        IF s2.empty() THEN              //transfer content from s2 to s1 to get reversed.
+            WHILE !s1.empty() DO
+                s2.push(s1.top()); 
+                s1.pop(); 
+            END WHILE
+        END IF
+        x = s2.top(); 
+        s2.pop(); 
+        return x; 
+    } 
+
+}
+
+main() 
+{ 
+    Queue q(3); // making a queue of size 3
+    q.enQueue(1);    //enqueue 1 in q
+    q.enQueue(2);    //enqueue 2 in q
+    q.enQueue(3);    //enqueue 3 in q
+    print ( q.deQueue() ) //output is 1 when q is dequeued
+    print ( q.deQueue() ) //output is 2 when q is dequeued
+    print ( q.deQueue() ) //output is 3 when q is dequeued
+
+  
+} 

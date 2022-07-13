@@ -1,0 +1,35 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+ int minFlips(int a, int b, int c) {
+        
+        int ans=0;
+        for(int i=0;i<32;i++){
+            int x= a&1;
+            int y= b&1;
+            int z= c&1;
+            
+            if(z){
+                if(x+y==0){
+                    ans++;
+                }
+            }
+            else{
+              ans+=(x+y);    
+               
+            }
+            
+            a=a>>1;
+            b=b>>1;
+            c=c>>1;
+        }
+        return ans;
+    }
+
+int main(){
+int a, b, c;
+cin>>a>>b>>c;
+cout<<”minimum flips required are”<<endl;
+cout<< minFlips(a,  b,  c);
+return 0;
+}

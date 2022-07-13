@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int countSquares(vector<vector<int>>& matrix) {
+        int r=matrix.size();
+        int c= matrix[0].size();
+        int cnt=0;
+        for(int i=0;i<c;i++){
+            if(matrix[r-1][i]){
+                cnt++;
+            }
+        }
+        for(int i=0;i<r-1;i++){
+            if(matrix[i][c-1]){
+                cnt++;
+            }
+        }
+        
+        for(int i=r-2;i>=0;i--){
+            for(int j=c-2;j>=0;j--){
+                if(matrix[i][j]){
+                    matrix[i][j]=matrix[i][j]+min(matrix[i][j+1], min(matrix[i+1][j], matrix[i+1][j+1]));
+                    cnt=cnt+matrix[i][j];
+                }
+            }
+        }
+    
+        return cnt;
+    }
+
+int main() {
+int r, c;
+cin>>r>>c;
+vector<vector<int>> matrix(r, vector<int>(c));
+
+for(int i=0;i<r;i++){
+for(int j=0;j<c;j++){
+cin>>matrix[i][j];
+}
+}
+
+cout<<countSquares( matrix) ;
+return 0;
+}
+
+
+
+
+
+
+

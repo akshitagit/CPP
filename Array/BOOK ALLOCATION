@@ -1,0 +1,56 @@
+//JAB BHI KHUCH BAATANEH KI BAAT OF ARRAY MEIN TO IS VALE METHOD KO YAAD KARLENA//
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+bool binarysearch(int a[], int n,int m,int mid)
+{   
+    int sum=0;
+    int studentcount=1;
+    for(int i=0;i<n;i++)
+    {
+        if(sum+a[i]<=mid)
+        {
+          sum += a[i];
+        }
+        else
+        {
+            studentcount++;
+            if(studentcount>m || a[i]>mid)
+            {
+                return false;
+            }
+             sum=a[i];
+        }   
+    }
+    return true;
+}
+int bookallocate(int a[],int n,int m)
+{
+    int start=0;
+    int end = accumulate(a,a+n,0);//this ids predefined functon in c sum up the elements//
+    int mid = start + (end-start)/2;
+    int ans=-1;
+    while(start<=end)
+    {
+        if(binarysearch(a,n,m,mid))
+        {
+          ans=mid;
+          end=mid-1;
+        }
+        else{
+            start=mid+1;
+        }
+        mid = start + (end-start)/2;
+    }
+    return ans;
+}
+int main()
+{
+int n=7;   
+
+int array[7]={10,20,30,40,50,60,70};
+
+cout<<bookallocate(array,n,3)<<endl;
+
+return 0 ;
+}

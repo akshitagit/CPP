@@ -1,0 +1,55 @@
+
+# CPP/C
+
+
+![Issues](https://img.shields.io/github/issues/akshitagit/CPP)
+![Pull Requests](https://img.shields.io/github/issues-pr/akshitagit/CPP)
+![Forks](https://img.shields.io/github/forks/akshitagit/CPP)
+![Stars](https://img.shields.io/github/stars/akshitagit/CPP)
+
+# REPOSITORY MAINTAINER : ![AKSHITA GUPTA](https://github.com/akshitagupta15june) 
+
+![image](https://user-images.githubusercontent.com/64991656/135403993-8436cfd2-5314-4c03-8509-d33e51c565b2.png)
+
+
+## [Link to Hacktoberfest 2021](https://hacktoberfest.digitalocean.com/)
+    
+
+### Open Repository For Students to Contribute Algorithms and Data Structures in different Languages
+
+### This Repository is meant for everyone to create code and learn to contribute to open source.
+
+
+
+Use this repo for contributing in open source.
+Start solving issues and raise the pull requests and even you can create your own issues.
+If you want to contribute to a project, the simplest way is to:
+
+Find a ISSUE you want to contribute to ->> Fork it
+
+    Clone it to your local system
+
+    Make a new branch
+
+    Make your changes
+
+    Push it back to your repo
+
+    Click the Compare & pull request button
+
+    Click Create pull request to open a new pull request
+
+If the reviewers ask for changes, repeat steps 5 and 6 to add more commits to your pull request.
+
+The implementations/codes which are added/merged in CPP-:
+
+# WE ALL HAVE MADE THIS REPOSITORY TO TREND IN GITHUB REPOSITORIES
+
+
+<img src="https://github.com/akshitagit/CPP/blob/master/trend.jpeg" width="230px">
+
+
+### Contributors :pray: :dizzy:
+![105](https://contributors-img.web.app/image?repo=akshitagit/CPP)
+
+Happy coding!

@@ -1,0 +1,60 @@
+#include<bits/stdc++.h> 
+using namespace std; 
+
+class Node { 
+public: 
+		int data; 
+		Node(int d){ 
+			data = d; 
+		} 
+		Node *ptr; 
+}; 
+
+bool isPalindrome(Node* head){ // Function to check if the linked list is palindrome or not 
+		Node* slow= head; // Temp pointer  
+		stack <int> s; // Declare a stack
+		// Push all elements of the list to the stack 
+		while(slow != NULL){ 
+				s.push(slow->data);  
+				slow = slow->ptr; // Move ahead
+		} 
+		while(head != NULL ){ // Iterate in the list again and check by popping from the stack  
+			int i=s.top(); // Get the top most element 
+			s.pop(); // Pop the element 
+			if(head -> data != i){ // Check if data is not same as popped element
+				return false; 
+			}  
+		head=head->ptr; // Move ahead
+		} 
+return true; 
+} 
+
+
+int main(){ 
+
+	// Addition of linked list 
+	Node one = Node(1); 
+	Node two = Node(2); 
+	Node three = Node(3); 
+	Node four = Node(2); 
+	Node five = Node(1); 
+
+	// Initialize the next pointer of every current pointer 
+	five.ptr = NULL; 
+	one.ptr = &two; 
+	two.ptr = &three; 
+	three.ptr = &four; 
+	four.ptr = &five; 
+	Node* temp = &one; 
+
+	
+	// Call function to check palindrome or not 
+	int result = isPalindrome(&one); 
+	
+	if(result == 1) 
+			cout<<"isPalindrome is true\n"; 
+	else
+		cout<<"isPalindrome is true\n"; 
+
+return 0; 
+} 

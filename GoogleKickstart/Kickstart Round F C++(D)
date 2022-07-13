@@ -1,0 +1,79 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ff first
+#define ss second
+#define MP make_pair
+#define PB push_back
+#define ll long long
+#define int long long
+#define f(i,x,n) for(int i=x;i<n;i++)
+#define ld long double
+const int mod=1000000007;
+const int INF=1e18;
+int n,m,k;
+vector <int> b;
+map <vector <int> , ld> mp;
+ld dfs(int pos,vector <int> a) {
+	sort(a.begin(),a.end(),greater <int> ());
+	if(pos==n)
+		return 0;
+	if(mp.count(a)==1) {
+		// cout<<a.size()<<endl;
+		return mp[a];
+	}
+	int sz=0,sz2=0;
+	ld ans=0;
+	int vali=-1,valind=-1;
+	for(int i=0;i<m;i++) {
+		if(i<a.size()) {
+			if(a[i]!=vali) {
+				vali=a[i];
+				valind=b[i];
+			}
+			if(a[i]+1<=valind) {
+				sz++;
+				a[i]++;
+				ans+=dfs(pos+1,a);
+				a[i]--;
+			}
+		}
+		else if(a.size()!=b.size()) {
+			// a.push_back(1);
+			sz2+=(m-i);
+			break;
+			// ans+=dfs(pos+1,a);
+			// a.pop_back();
+		}
+	}
+	if(sz2>0) {
+		a.push_back(1);
+		ans+=(ld)(sz2)*dfs(pos+1,a);
+		a.pop_back();
+	}
+	ans/=(ld)(sz+sz2);
+	ld ret=m/(ld)(sz+sz2);
+	// cout<<pos<<" "<<ans<<" "<<ret<<endl;
+	return mp[a]=ans+ret;
+}
+int32_t main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int t;
+	cin>>t;
+	f(tc,1,t+1) {
+		b.clear();
+		mp.clear();
+		cin>>n>>m>>k;
+		vector <int> a;
+		f(i,0,k) {
+			int in;
+			cin>>in;
+			b.push_back(in);
+		}
+		sort(b.begin(),b.end(), greater <int> ());
+		cout<<"Case #"<<tc<<": "<<setprecision(12)<<fixed<<dfs(0,a)<<'\n';
+	}
+	
+	return 0;
+}
