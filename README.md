@@ -9,9 +9,6 @@
 
 ## Open Repository For Students to Contribute Algorithms and Data Structures in different Languages
 
-## This Repository is meant for everyone to create code and learn to contribute to open source
-
-
 
 Use this repo for contributing in open source.
 Start solving issues and raise the pull requests and even you can create your own issues.
