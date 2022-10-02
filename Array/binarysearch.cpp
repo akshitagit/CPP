@@ -12,9 +12,9 @@ int binarySearch(int arr[], int l, int r, int x)
         if (arr[mid] == x) 
             return mid; 
   
-        if (arr[mid] > x) 
+       else if (arr[mid] > x) //now this condition will not be evaluated if earlier is true
             return binarySearch(arr, l, mid - 1, x); 
-
+       else
         return binarySearch(arr, mid + 1, r, x); 
     } 
   
