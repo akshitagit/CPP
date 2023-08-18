@@ -1,10 +1,14 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include <map>
+#include <list>
+
 class LRUCache {
-public:
-    map<int,int> mymap;
-    list<int> ls;
+
+    std::map<int,int> mymap;
+    std::list<int> ls;
     int cp;
+
+public:
+    
     LRUCache(int capacity) {
         cp = capacity;
         mymap.clear();
@@ -36,10 +40,3 @@ public:
         }
     }
 };
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache* obj = new LRUCache(capacity);
- * int param_1 = obj->get(key);
- * obj->put(key,value);
- */
