@@ -1,0 +1,42 @@
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int left = 0;               // Initialize the left boundary of the matrix.
+        int right = matrix[0].size();// Initialize the right boundary of the matrix.
+        int top = 0;                // Initialize the top boundary of the matrix.
+        int bottom = matrix.size(); // Initialize the bottom boundary of the matrix.
+        vector<int> ans;            // Create a vector to store the result.
+        
+        while (top < bottom && right > left) {
+            // Traverse the top row from left to right and add elements to 'ans'.
+            for (int i = left; i < right; i++)
+                ans.push_back(matrix[top][i]);
+            top++; // Move the top boundary down.
+
+            if (top >= bottom) break; // Check if we need to exit the loop.
+
+            // Traverse the rightmost column from top to bottom and add elements to 'ans'.
+            for (int i = top; i < bottom; i++)
+                ans.push_back(matrix[i][right - 1]);
+            right--; // Move the right boundary to the left.
+
+            if (right <= left) break; // Check if we need to exit the loop.
+
+            // Traverse the bottom row from right to left and add elements to 'ans'.
+            for (int i = right - 1; i >= left; i--)
+                ans.push_back(matrix[bottom - 1][i]);
+            bottom--; // Move the bottom boundary up.
+
+            if (top >= bottom) break; // Check if we need to exit the loop.
+
+            // Traverse the leftmost column from bottom to top and add elements to 'ans'.
+            for (int i = bottom - 1; i >= top; i--)
+                ans.push_back(matrix[i][left]);
+            left++; // Move the left boundary to the right.
+
+            if (right <= left) break; // Check if we need to exit the loop.
+        }
+        
+        return ans; // Return the final spiral order result.
+    }
+};
