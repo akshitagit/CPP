@@ -24,8 +24,13 @@ void kadaneAlgo(int a[],int n)
 
 int main()
 {
-	int n=5;
-	int a[5]={2,-4,-3,6,7}; // answer is 13
+	int n;
+	cin>>n;
+	int a[n];
+	for(int i=0; i<n; i++)
+	{
+		cin>>a[i]
+	}
 	kadaneAlgo(a,n);
 	return 0;
 }
