@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int stack[100], n=100, top=-1;
+//function to add or push element in stack
 void push(int val)
 {
    if(top>=n-1)
@@ -11,6 +12,7 @@ void push(int val)
       stack[top]=val;
    }
 }
+//function to delete or pop element in stack
 void pop()
 {
    if(top<=-1)
