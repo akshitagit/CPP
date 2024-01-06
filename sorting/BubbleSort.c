@@ -1,3 +1,4 @@
+//the code is for bubble sort
 #include<stdio.h>
 void swap(int *xp, int *yp)  
 {  
