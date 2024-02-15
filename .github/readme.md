@@ -17,6 +17,7 @@ Contribute to Open Source Algorithms and Data Structures (C++)!
 
 
 How to get involved:
+
     Browse open issues: Find an existing issue that interests you and requires help. You can search by difficulty level, language, or algorithm type.
     Create your own issue: Have an idea for a new algorithm or data structure? Submit an issue detailing your proposal and we'll discuss it with you.
     Start contributing: Once you've found an issue, follow these steps:
